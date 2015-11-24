@@ -253,7 +253,7 @@ namespace MvcLab.Migrations
                         column: x => x.CarrierId,
                         principalTable: "Carrier",
                         principalColumn: "CarrierId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Driver_Vehicle_VehicleId",
                         column: x => x.VehicleId,
@@ -299,7 +299,7 @@ namespace MvcLab.Migrations
                         column: x => x.CarrierId,
                         principalTable: "Carrier",
                         principalColumn: "CarrierId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Ride_Driver_DriverId",
                         column: x => x.DriverId,

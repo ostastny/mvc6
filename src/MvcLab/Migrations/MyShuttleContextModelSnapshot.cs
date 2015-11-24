@@ -426,6 +426,11 @@ namespace MvcLab.Migrations
                     b.HasOne("MyShuttle.Model.Carrier")
                         .WithMany()
                         .HasForeignKey("CarrierId");
+                    
+                    b.HasOne("MyShuttle.Model.Driver")
+                       .WithMany()
+                       .OnDelete(DeleteBehavior.Restrict)
+                       .HasForeignKey("DriverId");
                 });
         }
     }
