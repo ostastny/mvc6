@@ -188,7 +188,7 @@ namespace MyShuttle.Data
                 DriverId = ride.DriverId,
                 Driver = new Driver()
                 {
-                    DriverId = ride.DriverId,
+                    DriverId = ride.DriverId.Value,
                     Name = driverName
                 },
                 EmployeeId = ride.EmployeeId,
