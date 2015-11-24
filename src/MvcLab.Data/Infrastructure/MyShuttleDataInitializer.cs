@@ -41,7 +41,7 @@
         {
             _serviceProvider = serviceProvider;
             int carrierId = CreateCarrier_01(context);
-            await CreateDefaultUser(serviceProvider);
+            //await CreateDefaultUser(serviceProvider);
             CreateCarriers(context);
         }
 

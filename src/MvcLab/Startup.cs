@@ -30,6 +30,12 @@ namespace MyShuttle.Web
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseIISPlatformHandler(options => options.AuthenticationDescriptions.Clear());
+
+            app.UseStaticFiles();
+
+            //app.UseIdentity();
+
             app.ConfigureRoutes();
             MyShuttleDataInitializer.InitializeDatabaseAsync(app.ApplicationServices).Wait();
         }
